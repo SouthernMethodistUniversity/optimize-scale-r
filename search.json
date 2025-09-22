@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Optimizing and Scaling R",
     "section": "",
-    "text": "Welcome\nAdd the same welcome text here that are in the README.md\nThe content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.",
+    "text": "Welcome\nThis workshop covers how to optimize and scale your R code to work well in an HPC environment.\nThe content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.",
     "crumbs": [
       "Welcome"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#objectives",
     "title": "Optimizing and Scaling R",
     "section": "Objectives",
-    "text": "Objectives\n\nAdd the same bullet objectives here that are in the README.md",
+    "text": "Objectives\n\nLearn common code optimization strategies\nLearn common code scaling strategies\nLearn various ways to submit parallel R jobs on SMU HPC",
     "crumbs": [
       "Welcome"
     ]
@@ -30,199 +30,229 @@
     ]
   },
   {
-    "objectID": "section1.html",
-    "href": "section1.html",
-    "title": "Section 1",
+    "objectID": "setup.html",
+    "href": "setup.html",
+    "title": "Setup",
+    "section": "",
+    "text": "Loading R and RStudio\nWhile the principles in this workshop are generally applicable to both HPC and non-HPC environments, we recommend that you use an existing ColdFront project and compute allocation for this workshop on M3 and follow along using the M3 tab throughout. If you do not have access to HPC resources, you can follow along on the Local tab throughout, although the later sections regarding the Slurm job scheduler will not apply.",
+    "crumbs": [
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "setup.html#loading-r-and-rstudio",
+    "href": "setup.html#loading-r-and-rstudio",
+    "title": "Setup",
+    "section": "",
+    "text": "M3Local\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are not on campus while going through this content, you will need to connect to the VPN or switch to running locally.\n\n\n\nHPC PortalSSH\n\n\nYou can launch an RStudio session via the HPC Portal.\n\nNavigate to Interactive Apps → RStudio Server\nUse the following settings:\n\n\n\n\n\nSlurm Account\nChoose an appropriate one\n\n\nR Version\n4.5.1\n\n\nCustom Environment Settings\nLeave blank\n\n\nPartition\ndev\n\n\nTime (Hours)\n2\n\n\nTimeout (minutes)\n60\n\n\nCores per node\n1\n\n\nMemory\n4\n\n\n\n\n\nLaunch the job and wait for it to start\n\n\n\nTo access R from an SSH session, first you’ll need to be on a compute node. Add your Slurm account to the following command and run it from a login node:\nsrun -A &lt;your-slurm-account&gt; -p dev -c 1 -t 180 --mem=4G --pty $SHELL\nOnce the interactive job starts, you can launch an R session with:\nmodule load R/4.5.1\nR\n\n\n\n\n\nIf you do not already have R and RStudio installed, you can install them by following the instructions here.\nOnce installed, just simply launch RStudio and you are ready to go.",
+    "crumbs": [
+      "Setup"
+    ]
+  },
+  {
+    "objectID": "optimizing.html",
+    "href": "optimizing.html",
+    "title": "Optimizing",
     "section": "",
     "text": "Section Subheader\nEach section page should have a minimal overview of that section, and each header needs the .unnumbered brackets to specify that it should not be included in the chapter numbering.",
     "crumbs": [
-      "Section 1"
+      "Optimizing"
     ]
   },
   {
-    "objectID": "chapter1.html",
-    "href": "chapter1.html",
-    "title": "\n1  Chapter 1\n",
+    "objectID": "benchmarking.html",
+    "href": "benchmarking.html",
+    "title": "Benchmarking and Profiling",
     "section": "",
-    "text": "1.1 Objectives",
+    "text": "Objectives",
     "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1</span>"
+      "Optimizing",
+      "Benchmarking and Profiling"
     ]
   },
   {
-    "objectID": "chapter1.html#objectives",
-    "href": "chapter1.html#objectives",
-    "title": "\n1  Chapter 1\n",
-    "section": "",
-    "text": "Add a list of objectives at the top of each chapter. Information like estimated completion time and additional resources can be added here as well, if applicable.",
-    "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1</span>"
-    ]
-  },
-  {
-    "objectID": "chapter1.html#code",
-    "href": "chapter1.html#code",
-    "title": "\n1  Chapter 1\n",
-    "section": "\n1.2 Code",
-    "text": "1.2 Code\n\n1.2.1 Code Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\n\n1.2.2 Inline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
-    "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1</span>"
-    ]
-  },
-  {
-    "objectID": "chapter1.html#tab-groups",
-    "href": "chapter1.html#tab-groups",
-    "title": "\n1  Chapter 1\n",
-    "section": "\n1.3 Tab Groups",
-    "text": "1.3 Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
-    "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Chapter 1</span>"
-    ]
-  },
-  {
-    "objectID": "chapter2.html",
-    "href": "chapter2.html",
-    "title": "\n2  Chapter 2\n",
-    "section": "",
-    "text": "2.1 Objectives",
-    "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2</span>"
-    ]
-  },
-  {
-    "objectID": "chapter2.html#objectives",
-    "href": "chapter2.html#objectives",
-    "title": "\n2  Chapter 2\n",
+    "objectID": "benchmarking.html#objectives",
+    "href": "benchmarking.html#objectives",
+    "title": "Benchmarking and Profiling",
     "section": "",
     "text": "Add a list of objectives at the top of each chapter. Information like estimated completion time and additional resources can be added here as well, if applicable.",
     "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2</span>"
+      "Optimizing",
+      "Benchmarking and Profiling"
     ]
   },
   {
-    "objectID": "chapter2.html#code",
-    "href": "chapter2.html#code",
-    "title": "\n2  Chapter 2\n",
-    "section": "\n2.2 Code",
-    "text": "2.2 Code\n\n2.2.1 Code Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\n\n2.2.2 Inline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
+    "objectID": "benchmarking.html#code",
+    "href": "benchmarking.html#code",
+    "title": "Benchmarking and Profiling",
+    "section": "Code",
+    "text": "Code\nCode Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\nInline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
     "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2</span>"
+      "Optimizing",
+      "Benchmarking and Profiling"
     ]
   },
   {
-    "objectID": "chapter2.html#tab-groups",
-    "href": "chapter2.html#tab-groups",
-    "title": "\n2  Chapter 2\n",
-    "section": "\n2.3 Tab Groups",
-    "text": "2.3 Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
+    "objectID": "benchmarking.html#tab-groups",
+    "href": "benchmarking.html#tab-groups",
+    "title": "Benchmarking and Profiling",
+    "section": "Tab Groups",
+    "text": "Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
     "crumbs": [
-      "Section 1",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Chapter 2</span>"
+      "Optimizing",
+      "Benchmarking and Profiling"
     ]
   },
   {
-    "objectID": "section2.html",
-    "href": "section2.html",
-    "title": "Section 2",
+    "objectID": "vectorizing.html",
+    "href": "vectorizing.html",
+    "title": "Vectorizing",
+    "section": "",
+    "text": "Objectives",
+    "crumbs": [
+      "Optimizing",
+      "Vectorizing"
+    ]
+  },
+  {
+    "objectID": "vectorizing.html#objectives",
+    "href": "vectorizing.html#objectives",
+    "title": "Vectorizing",
+    "section": "",
+    "text": "Add a list of objectives at the top of each chapter. Information like estimated completion time and additional resources can be added here as well, if applicable.",
+    "crumbs": [
+      "Optimizing",
+      "Vectorizing"
+    ]
+  },
+  {
+    "objectID": "vectorizing.html#code",
+    "href": "vectorizing.html#code",
+    "title": "Vectorizing",
+    "section": "Code",
+    "text": "Code\nCode Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\nInline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
+    "crumbs": [
+      "Optimizing",
+      "Vectorizing"
+    ]
+  },
+  {
+    "objectID": "vectorizing.html#tab-groups",
+    "href": "vectorizing.html#tab-groups",
+    "title": "Vectorizing",
+    "section": "Tab Groups",
+    "text": "Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
+    "crumbs": [
+      "Optimizing",
+      "Vectorizing"
+    ]
+  },
+  {
+    "objectID": "parallelizing.html",
+    "href": "parallelizing.html",
+    "title": "Parallelizing",
     "section": "",
     "text": "Section Subheader\nEach section page should have a minimal overview of that section, and each header needs the .unnumbered brackets to specify that it should not be included in the chapter numbering.",
     "crumbs": [
-      "Section 2"
+      "Parallelizing"
     ]
   },
   {
-    "objectID": "chapter3.html",
-    "href": "chapter3.html",
-    "title": "\n3  Chapter 3\n",
+    "objectID": "cores.html",
+    "href": "cores.html",
+    "title": "Using Multiple Cores",
     "section": "",
-    "text": "3.1 Objectives",
+    "text": "Objectives",
     "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3</span>"
+      "Parallelizing",
+      "Using Multiple Cores"
     ]
   },
   {
-    "objectID": "chapter3.html#objectives",
-    "href": "chapter3.html#objectives",
-    "title": "\n3  Chapter 3\n",
-    "section": "",
-    "text": "Add a list of objectives at the top of each chapter. Information like estimated completion time and additional resources can be added here as well, if applicable.",
-    "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3</span>"
-    ]
-  },
-  {
-    "objectID": "chapter3.html#code",
-    "href": "chapter3.html#code",
-    "title": "\n3  Chapter 3\n",
-    "section": "\n3.2 Code",
-    "text": "3.2 Code\n\n3.2.1 Code Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\n\n3.2.2 Inline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
-    "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3</span>"
-    ]
-  },
-  {
-    "objectID": "chapter3.html#tab-groups",
-    "href": "chapter3.html#tab-groups",
-    "title": "\n3  Chapter 3\n",
-    "section": "\n3.3 Tab Groups",
-    "text": "3.3 Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
-    "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Chapter 3</span>"
-    ]
-  },
-  {
-    "objectID": "chapter4.html",
-    "href": "chapter4.html",
-    "title": "\n4  Chapter 4\n",
-    "section": "",
-    "text": "4.1 Objectives",
-    "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4</span>"
-    ]
-  },
-  {
-    "objectID": "chapter4.html#objectives",
-    "href": "chapter4.html#objectives",
-    "title": "\n4  Chapter 4\n",
+    "objectID": "cores.html#objectives",
+    "href": "cores.html#objectives",
+    "title": "Using Multiple Cores",
     "section": "",
     "text": "Add a list of objectives at the top of each chapter. Information like estimated completion time and additional resources can be added here as well, if applicable.",
     "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4</span>"
+      "Parallelizing",
+      "Using Multiple Cores"
     ]
   },
   {
-    "objectID": "chapter4.html#code",
-    "href": "chapter4.html#code",
-    "title": "\n4  Chapter 4\n",
-    "section": "\n4.2 Code",
-    "text": "4.2 Code\n\n4.2.1 Code Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\n\n4.2.2 Inline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
+    "objectID": "cores.html#code",
+    "href": "cores.html#code",
+    "title": "Using Multiple Cores",
+    "section": "Code",
+    "text": "Code\nCode Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\nInline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
     "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4</span>"
+      "Parallelizing",
+      "Using Multiple Cores"
     ]
   },
   {
-    "objectID": "chapter4.html#tab-groups",
-    "href": "chapter4.html#tab-groups",
-    "title": "\n4  Chapter 4\n",
-    "section": "\n4.3 Tab Groups",
-    "text": "4.3 Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
+    "objectID": "cores.html#tab-groups",
+    "href": "cores.html#tab-groups",
+    "title": "Using Multiple Cores",
+    "section": "Tab Groups",
+    "text": "Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
     "crumbs": [
-      "Section 2",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Chapter 4</span>"
+      "Parallelizing",
+      "Using Multiple Cores"
+    ]
+  },
+  {
+    "objectID": "slurm.html",
+    "href": "slurm.html",
+    "title": "Slurm Array Jobs",
+    "section": "",
+    "text": "Objectives",
+    "crumbs": [
+      "Parallelizing",
+      "Slurm Array Jobs"
+    ]
+  },
+  {
+    "objectID": "slurm.html#objectives",
+    "href": "slurm.html#objectives",
+    "title": "Slurm Array Jobs",
+    "section": "",
+    "text": "Add a list of objectives at the top of each chapter. Information like estimated completion time and additional resources can be added here as well, if applicable.",
+    "crumbs": [
+      "Parallelizing",
+      "Slurm Array Jobs"
+    ]
+  },
+  {
+    "objectID": "slurm.html#code",
+    "href": "slurm.html#code",
+    "title": "Slurm Array Jobs",
+    "section": "Code",
+    "text": "Code\nCode Chunks\nTo add code chunks, see the structure below:\n\nprint(\"Hello World\")\n\n[1] \"Hello World\"\n\n\nInline Code\nYou can add inline code like this and it will link to that functions documentation: filter()",
+    "crumbs": [
+      "Parallelizing",
+      "Slurm Array Jobs"
+    ]
+  },
+  {
+    "objectID": "slurm.html#tab-groups",
+    "href": "slurm.html#tab-groups",
+    "title": "Slurm Array Jobs",
+    "section": "Tab Groups",
+    "text": "Tab Groups\nYou can create tab groups with the structure below:\n\n\nTab 1\nTab 2\n\n\n\n\nThis is the contents of the first tab!\n\n\n\n\nThis is the contents of the second tab!",
+    "crumbs": [
+      "Parallelizing",
+      "Slurm Array Jobs"
+    ]
+  },
+  {
+    "objectID": "environments.html",
+    "href": "environments.html",
+    "title": "Environments",
+    "section": "",
+    "text": "Section Subheader\nEach section page should have a minimal overview of that section, and each header needs the .unnumbered brackets to specify that it should not be included in the chapter numbering.",
+    "crumbs": [
+      "Environments"
     ]
   },
   {

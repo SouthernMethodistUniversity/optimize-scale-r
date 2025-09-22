@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/index.html</loc>
-    <lastmod>2025-08-21T19:37:05.196Z</lastmod>
+    <lastmod>2025-09-22T15:35:14.104Z</lastmod>
   </url>
   <url>
-    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/section1.html</loc>
-    <lastmod>2025-08-21T19:37:05.196Z</lastmod>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/setup.html</loc>
+    <lastmod>2025-09-22T15:35:14.104Z</lastmod>
   </url>
   <url>
-    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/chapter1.html</loc>
-    <lastmod>2025-08-21T19:37:05.193Z</lastmod>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/optimizing.html</loc>
+    <lastmod>2025-09-22T15:35:14.104Z</lastmod>
   </url>
   <url>
-    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/chapter2.html</loc>
-    <lastmod>2025-08-21T19:37:05.193Z</lastmod>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/benchmarking.html</loc>
+    <lastmod>2025-09-22T15:35:14.101Z</lastmod>
   </url>
   <url>
-    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/section2.html</loc>
-    <lastmod>2025-08-21T19:37:05.196Z</lastmod>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/vectorizing.html</loc>
+    <lastmod>2025-09-22T15:35:14.105Z</lastmod>
   </url>
   <url>
-    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/chapter3.html</loc>
-    <lastmod>2025-08-21T19:37:05.193Z</lastmod>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/parallelizing.html</loc>
+    <lastmod>2025-09-22T15:35:14.104Z</lastmod>
   </url>
   <url>
-    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/chapter4.html</loc>
-    <lastmod>2025-08-21T19:37:05.193Z</lastmod>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/cores.html</loc>
+    <lastmod>2025-09-22T15:35:14.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/slurm.html</loc>
+    <lastmod>2025-09-22T15:35:14.104Z</lastmod>
+  </url>
+  <url>
+    <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/environments.html</loc>
+    <lastmod>2025-09-22T15:35:14.101Z</lastmod>
   </url>
   <url>
     <loc>https://southernmethodistuniversity.github.io/optimize-scale-r/next_steps.html</loc>
-    <lastmod>2025-08-21T19:37:05.196Z</lastmod>
+    <lastmod>2025-09-22T15:35:14.104Z</lastmod>
   </url>
 </urlset>
