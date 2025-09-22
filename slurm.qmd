@@ -5,7 +5,7 @@ code-links:
     href: code/example_code.R
 ---
 
-# Chapter 4
+# Slurm Array Jobs {.unnumbered}
 
 ## Objectives
 

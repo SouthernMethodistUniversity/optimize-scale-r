@@ -1,4 +1,4 @@
-# Section 1 {.unnumbered}
+# Optimizing {.unnumbered}
 
 ## Section Subheader {.unnumbered}
 

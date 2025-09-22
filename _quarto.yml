@@ -20,14 +20,16 @@ book:
   repo-actions: [edit, issue]
   chapters: # TODO update entire structure to represent your structure
     - index.qmd
-    - part: section1.qmd
+    - setup.qmd
+    - part: optimizing.qmd
       chapters: 
-        - chapter1.qmd
-        - chapter2.qmd
-    - part: section2.qmd
+        - benchmarking.qmd
+        - vectorizing.qmd
+    - part: parallelizing.qmd
       chapters: 
-        - chapter3.qmd
-        - chapter4.qmd
+        - cores.qmd
+        - slurm.qmd
+    - environments.qmd
     - next_steps.qmd
 
 format:

@@ -1,12 +1,14 @@
 # Welcome {.unnumbered}
 
-Add the same welcome text here that are in the README.md
+This workshop covers how to optimize and scale your R code to work well in an HPC environment.
 
 The content for this workshop is developed and taught by the OIT Research Technology Services team at SMU in collaboration with SMU Libraries.
 
 ## Objectives
 
-- Add the same bullet objectives here that are in the README.md
+-   Learn common code optimization strategies
+-   Learn common code scaling strategies
+-   Learn various ways to submit parallel R jobs on SMU HPC
 
 ## License
 

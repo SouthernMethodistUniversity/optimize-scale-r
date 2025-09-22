@@ -1,0 +1,63 @@
+# Setup {.unnumbered}
+
+While the principles in this workshop are generally applicable to both HPC and non-HPC environments, we recommend that you use an existing ColdFront project and compute allocation for this workshop on M3 and follow along using the `M3` tab throughout. If you do not have access to HPC resources, you can follow along on the `Local` tab throughout, although the later sections regarding the Slurm job scheduler will not apply.
+
+## Loading R and RStudio
+
+::::: panel-tabset
+
+## M3
+
+::: {.callout-note appearance="default"}
+If you are not on campus while going through this content, you will need to connect to the [VPN](https://www.smu.edu/oit/services/vpn) or switch to running locally.
+:::
+
+:::: panel-tabset
+
+### HPC Portal
+
+You can launch an RStudio session via the [HPC Portal](https://hpc.m3.smu.edu/).
+
+  1.  Navigate to `Interactive Apps` &rarr; `RStudio Server`
+
+  2.  Use the following settings:
+  
+>  |                             |                           |
+>  |-----------------------------|---------------------------|
+>  | Slurm Account               | Choose an appropriate one |
+>  | R Version                   | 4.5.1                     |
+>  | Custom Environment Settings | Leave blank               |
+>  | Partition                   | dev                       |
+>  | Time (Hours)                | 2                         |
+>  | Timeout (minutes)           | 60                        |
+>  | Cores per node              | 1                         |
+>  | Memory                      | 4                         |
+
+  3. Launch the job and wait for it to start
+
+### SSH
+
+To access R from an SSH session, first you'll need to be on a compute node.
+Add your Slurm account to the following command and run it from a login node:
+
+```bash
+srun -A <your-slurm-account> -p dev -c 1 -t 180 --mem=4G --pty $SHELL
+```
+
+Once the interactive job starts, you can launch an R session with:
+
+``` bash
+module load R/4.5.1
+R
+```
+
+::::
+
+## Local
+
+If you do not already have R and RStudio installed, you can install them by
+following the instructions [here](https://posit.co/download/rstudio-desktop/).
+
+Once installed, just simply launch RStudio and you are ready to go.
+
+:::::

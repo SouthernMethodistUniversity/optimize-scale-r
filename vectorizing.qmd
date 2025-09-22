@@ -5,7 +5,7 @@ code-links:
     href: code/example_code.R
 ---
 
-# Chapter 1
+# Vectorizing {.unnumbered}
 
 ## Objectives
 
